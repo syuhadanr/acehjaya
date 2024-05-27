@@ -94,7 +94,6 @@
                                     class="dropdown-item">Lifestyle</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
