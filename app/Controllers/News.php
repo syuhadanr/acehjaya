@@ -1,60 +1,61 @@
 <?php
+
 namespace App\Controllers;
-require_once 'vendor/autoload.php'; // Autoload Composer packages
-
-
 
 use CodeIgniter\Controller;
-use Symfony\Component\DomCrawler\Crawler;
-use GuzzleHttp\Client;
 
 class News extends Controller
 {
     public function index()
     {
-        // Create a GuzzleHttp Client instance
-        $client = new Client();
+        // Mengimpor Simple HTML DOM Parser
+        require_once APPPATH . 'Libraries/simple_html_dom.php';
 
-        // Array to store scraped news
-        $news = [];
+        // Mengambil HTML dari URL
+        $url = 'https://aceh.tribunnews.com/tag/aceh-jaya';
+        $html = file_get_contents($url);
 
-        // URLs to scrape
-        $urls = [
-            'https://aceh.tribunnews.com/tag/aceh-jaya',
-            'https://aceh.tribunnews.com/tag/calang',
-        ];
-
-        // Scrape each URL
-        foreach ($urls as $url) {
-            // Send a GET request
-            $response = $client->request('GET', $url);
-
-            // Get the HTML content
-            $html = (string) $response->getBody();
-
-            // Create a new Crawler instance
-            $crawler = new Crawler($html);
-
-            // Find news elements
-            $newsElements = $crawler->filter('.articles--iridescent-list');
-
-            // Loop through each news element
-            $newsElements->each(function (Crawler $node) use (&$news) {
-                $title = $node->filter('h3')->text();
-                $summary = $node->filter('.f18r_')->text(); // Example: Assuming summary has a class of 'f18r_'
-
-                // Add news to the array
-                $news[] = [
-                    'title' => $title,
-                    'summary' => $summary,
-                ];
-            });
+        // Periksa apakah konten HTML berhasil diambil
+        if ($html === FALSE) {
+            echo "Failed to retrieve HTML.";
+            return;
         }
 
-        // Pass news data to the view
-        $data['news'] = $news;
+        // Membuat objek DOM
+        $dom = str_get_html($html);
 
-        // Load the view and pass the data
+        // Periksa apakah objek DOM berhasil dibuat
+        if ($dom === FALSE) {
+            echo "Failed to parse HTML.";
+            return;
+        }
+
+        // Array untuk menyimpan data berita
+        $news = [];
+
+        // Menemukan elemen-elemen berita dan mengekstrak data
+        foreach ($dom->find('.fr.mt3.pos_rel') as $element) {
+            $linkElement = $element->find('a', 0);
+            $imgElement = $element->find('img', 0);
+            $descElement = $element->next_sibling()->find('h4.grey2.pt5', 0);
+
+            if ($linkElement && $imgElement && $descElement) {
+                $link = $linkElement->href;
+                $title = $linkElement->title;
+                $image = $imgElement->src;
+                $description = $descElement->plaintext;
+
+                $news[] = [
+                    'title' => $title,
+                    'link' => $link,
+                    'image' => $image,
+                    'description' => $description
+                ];
+            }
+        }
+
+        // Mengirim data ke view
+        $data['news'] = $news;
         return view('index', $data);
     }
 }

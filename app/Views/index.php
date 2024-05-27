@@ -31,6 +31,22 @@
 
     <!-- Template Stylesheet -->
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
+
+    <style>
+        .fixed-height-img {
+            width: 100%; /* Sesuaikan dengan container */
+            height: 90px; /* Tinggi tetap */
+            object-fit: cover; /* Sesuaikan gambar dalam container */
+        }
+        .description {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2; /* Batasi hingga dua baris */
+            height: 3.5em; /* Sesuaikan dengan tinggi dua baris teks */
+        }
+
+    </style>
 </head>
 
 <body>
@@ -170,76 +186,27 @@
         </div>
         <!-- Newsletter End -->
 
-
         <!-- Service Start -->
         <div class="container-xxl py-5">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>
-                    <h2 class="mt-2">What Solutions We Provide</h2>
-                </div>
+                    <h6 class="position-relative d-inline text-primary ps-4">Terkini</h6>
+                    <h2 class="mt-2">Berita Aceh Jaya</h2>
+                </div>                
                 <div class="row g-4">
+                <?php foreach ($news as $item): ?>
                     <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
+                            <img src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="fixed-height-img">
                             </div>
-                            <h5 class="mb-3">SEO Optimization</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                            <h5 class="mb-3"><?= $item['title'] ?></h5>
+                            <p class="description"><?= $item['description'] ?></p>
+                            <a class="btn px-3 mt-auto mx-auto" href="<?= $item['link'] ?>" target="_blank">Read More</a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Social Media Marketing</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Email Marketing</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">PPC Advertising</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                </div>                
             </div>
         </div>
         <!-- Service End -->
@@ -262,136 +229,25 @@
                     </div>
                 </div>
                 <div class="row g-4 portfolio-container">
+                <?php foreach ($news as $item): ?>
                     <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
                         <div class="position-relative rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url('assets/img/portfolio-1.jpg') ?>" alt="">
+                        <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">                          
                             <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <a class="btn btn-light" href="<?= $item['link'] ?>" target="_blank">read more</a>
                                 <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i><?= $item['description'] ?></small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href=""><?= $item['title'] ?></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.3s">
-                        <div class="position-relative rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url('assets/img/portfolio-2.jpg') ?>" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.6s">
-                        <div class="position-relative rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url('assets/img/portfolio-3.jpg') ?>" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.1s">
-                        <div class="position-relative rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url('assets/img/portfolio-4.jpg') ?>" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.3s">
-                        <div class="position-relative rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url('assets/img/portfolio-5.jpg') ?>" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
-                        <div class="position-relative rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url('assets/img/portfolio-6.jpg') ?>" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
         <!-- Portfolio End -->
 
-
-        <!-- Testimonial Start -->
-        <div class="container-xxl bg-primary testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                        <i class="fa fa-quote-left fa-2x mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url('assets/img/testimonial-1.jpg') ?>" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                        <i class="fa fa-quote-left fa-2x mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url('assets/img/testimonial-2.jpg') ?>" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                        <i class="fa fa-quote-left fa-2x mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url('assets/img/testimonial-3.jpg') ?>" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                        <i class="fa fa-quote-left fa-2x mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url('assets/img/testimonial-4.jpg') ?>" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
 
 
         <!-- Team Start -->
