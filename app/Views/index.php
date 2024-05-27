@@ -186,10 +186,10 @@
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="position-relative d-inline text-primary ps-4">Terkini</h6>
-                    <h2 class="mt-2">Berita Aceh Jaya</h2>
+                    <h2 class="mt-2">Kabar Aceh Jaya Calang</h2>
                 </div>                
                 <div class="row g-4">
-                <?php foreach ($news as $item): ?>
+                <?php foreach (array_merge($news1, $news2) as $item): ?>
                     <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                             <div class="service-icon flex-shrink-0">
@@ -206,26 +206,39 @@
         </div>
         <!-- Service End -->
 
-
         <!-- Portfolio Start -->
         <div class="container-xxl py-5">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="position-relative d-inline text-primary ps-4">Our Projects</h6>
-                    <h2 class="mt-2">Recently Launched Projects</h2>
+                    <h6 class="position-relative d-inline text-primary ps-4">Klasifikasi Berita</h6>
+                    <h2 class="mt-2">Kabar Khsus Terkini</h2>
                 </div>
                 <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="col-12 text-center">
                         <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="btn px-3 pe-4 active" data-filter="*">All</li>
-                            <li class="btn px-3 pe-4" data-filter=".first">Design</li>
-                            <li class="btn px-3 pe-4" data-filter=".second">Development</li>
+                            <li class="btn px-3 pe-4 active" data-filter="*">Semua</li>
+                            <li class="btn px-3 pe-4" data-filter=".first">Aceh Jaya</li>
+                            <li class="btn px-3 pe-4" data-filter=".second">Calang</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row g-4 portfolio-container">
-                <?php foreach ($news as $item): ?>
+                <?php foreach ($news1 as $item): ?>
                     <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
+                        <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">                          
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="<?= $item['link'] ?>" target="_blank">read more</a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i><?= $item['description'] ?></small>
+                                    <a class="h5 d-block text-white mt-1 mb-0" href=""><?= $item['title'] ?></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                    <?php foreach ($news2 as $item): ?>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.1s">
                         <div class="position-relative rounded overflow-hidden">
                         <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">                          
                             <div class="portfolio-overlay">

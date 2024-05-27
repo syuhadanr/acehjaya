@@ -18,7 +18,8 @@ class News extends Controller
         ];
 
         // Array untuk menyimpan data berita
-        $news = [];
+        $news1 = []; // Berita dari Aceh Jaya
+        $news2 = []; // Berita dari Calang
 
         // Fungsi untuk mengambil dan memparse data dari URL
         function fetchNews($url) {
@@ -65,11 +66,15 @@ class News extends Controller
 
         // Ambil berita dari semua URL
         foreach ($urls as $url) {
-            $news = array_merge($news, fetchNews($url));
+            // Tentukan kategori berita berdasarkan URL
+            $category = (strpos($url, 'aceh-jaya') !== false) ? 'news1' : 'news2';
+            // Simpan berita ke dalam variabel yang sesuai dengan kategori
+            $$category = array_merge($$category, fetchNews($url));
         }
 
         // Mengirim data ke view
-        $data['news'] = $news;
+        $data['news1'] = $news1;
+        $data['news2'] = $news2;
         return view('index', $data);
     }
 }
