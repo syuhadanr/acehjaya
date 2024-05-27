@@ -33,11 +33,6 @@
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
 
     <style>
-        .fixed-height-img {
-            width: 100%; /* Sesuaikan dengan container */
-            height: 90px; /* Tinggi tetap */
-            object-fit: cover; /* Sesuaikan gambar dalam container */
-        }
         .description {
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -198,7 +193,7 @@
                     <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                            <img src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" class="fixed-height-img">
+                            <img src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">
                             </div>
                             <h5 class="mb-3"><?= $item['title'] ?></h5>
                             <p class="description"><?= $item['description'] ?></p>
