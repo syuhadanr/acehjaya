@@ -34,6 +34,13 @@
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
 
     <style>
+        .image-link:hover img {
+            transform: scale(1.3);
+            /* Membesarkan gambar saat dihover */
+            transition: transform 0.3s ease;
+            /* Efek transisi saat perubahan ukuran */
+        }
+
         .description {
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -62,7 +69,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-search me-2"></i>SEO<span class="fs-5">Master</span></h1>
+                    <h1 class="m-0"><i class="fa fa-search me-2"></i>AJAY<span class="fs-5">News</span></h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -71,23 +78,28 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="/" class="nav-item nav-link active">Home</a>
-                        <a href="about" class="nav-item nav-link">About</a>
-                        <a href="service" class="nav-item nav-link">Service</a>
-                        <a href="project" class="nav-item nav-link">Project</a>
+                        <a href="https://aceh.tribunnews.com/nanggroe" target="blank"
+                            class="nav-item nav-link">Nanggroe</a>
+                        <a href="https://aceh.tribunnews.com/politik" class="nav-item nav-link">Politik</a>
+                        <a href="https://aceh.tribunnews.com/bisnis" class="nav-item nav-link">Bisnis</a>
+                        <a href="https://aceh.tribunnews.com/sport" class="nav-item nav-link">Sport</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Lainnya</a>
                             <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a target="blank" href="https://aceh.tribunnews.com/seleb"
+                                    class="dropdown-item">Seleb</a>
+                                <a target="blank" href="https://aceh.tribunnews.com/travel"
+                                    class="dropdown-item">Travel</a>
+                                <a target="blank" href="https://aceh.tribunnews.com/lifestyle"
+                                    class="dropdown-item">Lifestyle</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                    <a href="https://htmlcodex.com/startup-company-website-template"
-                        class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Pro Version</a>
+                    <a href="https://aceh.tribunnews.com/info-iklan/"
+                        class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Jasa Iklan</a>
                 </div>
             </nav>
 
@@ -95,11 +107,12 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated zoomIn">All in one SEO tool need to grow your business
-                                rapidly</h1>
-                            <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum
-                                ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit
-                                justo amet ipsum vero ipsum clita lorem</p>
+                            <h1 class="text-white mb-4 animated zoomIn">Kabar lengkap terkini seputar ACEH JAYA dan
+                                CALANG</h1>
+                            <p class="text-white pb-3 animated zoomIn">Dapatkan liputan eksklusif, analisis mendalam,
+                                dan beragam topik menarik yang mencakup politik, ekonomi, budaya, dan masih banyak lagi.
+                                Situs Anda untuk mengikuti jejak peristiwa terbaru dan merangkum informasi penting yang
+                                relevan dengan kualitas dan keberimbangan yang tinggi</p>
                             <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free
                                 Quote</a>
                             <a href=""
@@ -136,57 +149,14 @@
         </div>
         <!-- Full Screen Search End -->
 
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="section-title position-relative mb-4 pb-2">
-                            <h6 class="position-relative text-primary ps-4">About Us</h6>
-                            <h2 class="mt-2">The best SEO solution with 10 years of experience</h2>
-                        </div>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu
-                            diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem
-                            sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Award Winning</h6>
-                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional Staff</h6>
-                            </div>
-                            <div class="col-sm-6">
-                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
-                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mt-4">
-                            <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s"
-                            src="<?= base_url('assets/img/about.jpg') ?>">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
         <!-- Newsletter Start -->
         <div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container px-lg-5">
                 <div class="row align-items-center" style="height: 250px;">
                     <div class="col-12 col-md-6">
-                        <h3 class="text-white">Ready to get started</h3>
-                        <small class="text-white">Diam elitr est dolore at sanctus nonumy.</small>
+                        <h3 class="text-white">Langganan berita terbaru</h3>
+                        <small class="text-white">Dapatkan akses eksklusif ke konten premium, artikel terbaru, dan
+                            pembaruan langsung ke kotak masuk Anda.</small>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
                                 placeholder="Enter Your Email" style="height: 48px;">
@@ -239,9 +209,9 @@
                 <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="col-12 text-center">
                         <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="btn px-3 pe-4 active" data-filter="*">Semua</li>
+                            <li class="btn px-3 pe-4 active" data-filter=".second">Calang</li>
                             <li class="btn px-3 pe-4" data-filter=".first">Aceh Jaya</li>
-                            <li class="btn px-3 pe-4" data-filter=".second">Calang</li>
+                            <li class="btn px-3 pe-4" data-filter="*">Semua</li>
                         </ul>
                     </div>
                 </div>
@@ -311,7 +281,7 @@
                                     alt="">
                             </div>
                             <div class="px-4 py-3">
-                                <h5 class="fw-bold m-0">Jhon Doe</h5>
+                                <h5 class="fw-bold m-0">Muhammad Syuhada</h5>
                                 <small>CEO</small>
                             </div>
                         </div>
@@ -408,7 +378,7 @@
                                 if ($counter < 9): // Batasi pengulangan hanya sampai 6 kali
                                     ?>
                                     <div class="col-4">
-                                        <a href="<?= $item['link'] ?>" target="_blank">
+                                        <a href="<?= $item['link'] ?>" target="_blank" class="image-link">
                                             <img class="img-fluid" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>">
                                         </a>
                                     </div>
@@ -421,7 +391,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h5 class="text-white mb-4">Info Iklan</h5>
-                        <p><strong>PT Aceh Media Grafika</strong> Jalan Raya Lambaro, Km 4,5 Desa Meunasah Manyang,
+                        <p><strong>PT Aceh Media Grafika</strong> - Jalan Raya Lambaro, Km 4,5 Desa Meunasah Manyang,
                             Kecamatan Ingin Jaya
                             Kabupaten Aceh Besar, Aceh 23371</p>
 
