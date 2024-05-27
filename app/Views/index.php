@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -37,17 +38,19 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            -webkit-line-clamp: 2; /* Batasi hingga dua baris */
-            height: 3.5em; /* Sesuaikan dengan tinggi dua baris teks */
+            -webkit-line-clamp: 2;
+            /* Batasi hingga dua baris */
+            height: 3.5em;
+            /* Sesuaikan dengan tinggi dua baris teks */
         }
-
     </style>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -81,8 +84,10 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                    <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Pro Version</a>
+                    <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                    <a href="https://htmlcodex.com/startup-company-website-template"
+                        class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Pro Version</a>
                 </div>
             </nav>
 
@@ -90,10 +95,16 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated zoomIn">All in one SEO tool need to grow your business rapidly</h1>
-                            <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
-                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
-                            <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                            <h1 class="text-white mb-4 animated zoomIn">All in one SEO tool need to grow your business
+                                rapidly</h1>
+                            <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum
+                                ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit
+                                justo amet ipsum vero ipsum clita lorem</p>
+                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free
+                                Quote</a>
+                            <a href=""
+                                class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact
+                                Us</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img class="img-fluid" src="<?= base_url('assets/img/hero.png') ?>" alt="">
@@ -110,11 +121,13 @@
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
                     <div class="modal-header border-0">
-                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex align-items-center justify-content-center">
                         <div class="input-group" style="max-width: 600px;">
-                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                            <input type="text" class="form-control bg-transparent border-light p-3"
+                                placeholder="Type search keyword">
                             <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
                         </div>
                     </div>
@@ -133,7 +146,9 @@
                             <h6 class="position-relative text-primary ps-4">About Us</h6>
                             <h2 class="mt-2">The best SEO solution with 10 years of experience</h2>
                         </div>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu
+                            diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem
+                            sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Award Winning</h6>
@@ -146,14 +161,18 @@
                         </div>
                         <div class="d-flex align-items-center mt-4">
                             <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square me-3" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square me-3" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square me-3" href=""><i
+                                    class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="<?= base_url('assets/img/about.jpg') ?>">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s"
+                            src="<?= base_url('assets/img/about.jpg') ?>">
                     </div>
                 </div>
             </div>
@@ -169,12 +188,15 @@
                         <h3 class="text-white">Ready to get started</h3>
                         <small class="text-white">Diam elitr est dolore at sanctus nonumy.</small>
                         <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Enter Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
                         </div>
                     </div>
                     <div class="col-md-6 text-center mb-n5 d-none d-md-block">
-                        <img class="img-fluid mt-5" style="height: 250px;" src="<?= base_url('assets/img/newsletter.png') ?>">
+                        <img class="img-fluid mt-5" style="height: 250px;"
+                            src="<?= base_url('assets/img/newsletter.png') ?>">
                     </div>
                 </div>
             </div>
@@ -187,21 +209,22 @@
                 <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="position-relative d-inline text-primary ps-4">Terkini</h6>
                     <h2 class="mt-2">Kabar Aceh Jaya Calang</h2>
-                </div>                
+                </div>
                 <div class="row g-4">
-                <?php foreach (array_merge($news1, $news2) as $item): ?>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                            <img src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">
+                    <?php foreach (array_merge($news1, $news2) as $item): ?>
+                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                            <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <img src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">
+                                </div>
+                                <h5 class="mb-3"><?= $item['title'] ?></h5>
+                                <p class="description"><?= $item['description'] ?></p>
+                                <a class="btn px-3 mt-auto mx-auto" href="<?= $item['link'] ?>" target="_blank">Read
+                                    More</a>
                             </div>
-                            <h5 class="mb-3"><?= $item['title'] ?></h5>
-                            <p class="description"><?= $item['description'] ?></p>
-                            <a class="btn px-3 mt-auto mx-auto" href="<?= $item['link'] ?>" target="_blank">Read More</a>
                         </div>
-                    </div>
                     <?php endforeach; ?>
-                </div>                
+                </div>
             </div>
         </div>
         <!-- Service End -->
@@ -223,33 +246,37 @@
                     </div>
                 </div>
                 <div class="row g-4 portfolio-container">
-                <?php foreach ($news1 as $item): ?>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
-                        <div class="position-relative rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">                          
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="<?= $item['link'] ?>" target="_blank">read more</a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i><?= $item['description'] ?></small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href=""><?= $item['title'] ?></a>
+                    <?php foreach ($news1 as $item): ?>
+                        <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
+                            <div class="position-relative rounded overflow-hidden">
+                                <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>"
+                                    width="120" height="90">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-light" href="<?= $item['link'] ?>" target="_blank">read more</a>
+                                    <div class="mt-auto">
+                                        <small class="text-white"><i
+                                                class="fa fa-folder me-2"></i><?= $item['description'] ?></small>
+                                        <a class="h5 d-block text-white mt-1 mb-0" href=""><?= $item['title'] ?></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php endforeach; ?>
                     <?php foreach ($news2 as $item): ?>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.1s">
-                        <div class="position-relative rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width="120" height="90">                          
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-light" href="<?= $item['link'] ?>" target="_blank">read more</a>
-                                <div class="mt-auto">
-                                    <small class="text-white"><i class="fa fa-folder me-2"></i><?= $item['description'] ?></small>
-                                    <a class="h5 d-block text-white mt-1 mb-0" href=""><?= $item['title'] ?></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.1s">
+                            <div class="position-relative rounded overflow-hidden">
+                                <img class="img-fluid w-100" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>"
+                                    width="120" height="90">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-light" href="<?= $item['link'] ?>" target="_blank">read more</a>
+                                    <div class="mt-auto">
+                                        <small class="text-white"><i
+                                                class="fa fa-folder me-2"></i><?= $item['description'] ?></small>
+                                        <a class="h5 d-block text-white mt-1 mb-0" href=""><?= $item['title'] ?></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -269,13 +296,19 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item">
                             <div class="d-flex">
-                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
+                                    style="width: 75px;">
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-linkedin-in"></i></a>
                                 </div>
-                                <img class="img-fluid rounded w-100" src="<?= base_url('assets/img/team-1.jpg') ?>" alt="">
+                                <img class="img-fluid rounded w-100" src="<?= base_url('assets/img/team-1.jpg') ?>"
+                                    alt="">
                             </div>
                             <div class="px-4 py-3">
                                 <h5 class="fw-bold m-0">Jhon Doe</h5>
@@ -286,13 +319,19 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item">
                             <div class="d-flex">
-                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
+                                    style="width: 75px;">
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-linkedin-in"></i></a>
                                 </div>
-                                <img class="img-fluid rounded w-100" src="<?= base_url('assets/img/team-2.jpg') ?>" alt="">
+                                <img class="img-fluid rounded w-100" src="<?= base_url('assets/img/team-2.jpg') ?>"
+                                    alt="">
                             </div>
                             <div class="px-4 py-3">
                                 <h5 class="fw-bold m-0">Emma William</h5>
@@ -303,13 +342,19 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="team-item">
                             <div class="d-flex">
-                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
+                                    style="width: 75px;">
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i
+                                            class="fab fa-linkedin-in"></i></a>
                                 </div>
-                                <img class="img-fluid rounded w-100" src="<?= base_url('assets/img/team-3.jpg') ?>" alt="">
+                                <img class="img-fluid rounded w-100" src="<?= base_url('assets/img/team-3.jpg') ?>"
+                                    alt="">
                             </div>
                             <div class="px-4 py-3">
                                 <h5 class="fw-bold m-0">Noah Michael</h5>
@@ -321,7 +366,7 @@
             </div>
         </div>
         <!-- Team End -->
-        
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -329,9 +374,9 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-3">
                         <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Darul Imarah, Aceh Besar</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+62813 6152 7454</p>
+                        <p><i class="fa fa-envelope me-3"></i>msyuhadaramlan@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -342,41 +387,49 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h5 class="text-white mb-4">Popular Link</h5>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a>
+                        <a class="btn btn-link" target="blank" href="https://www.tribunnews.com/about/">About
+                            Us</a>
+                        <a class="btn btn-link" target="blank" href="https://aceh.tribunnews.com/contact-us/">Contact
+                            Us</a>
+                        <a class="btn btn-link" target="blank" href="https://www.tribunnews.com/privacy-policy/">Privacy
+                            Policy</a>
+                        <a class="btn btn-link" target="blank" href="https://www.tribunnews.com/pedoman/">Pedoman
+                            Media Siber</a>
+                        <a class="btn btn-link" target="blank" href="https://aceh.tribunnews.com/terms/">Terms &
+                            Condition</a>
+                        <a class="btn btn-link" target="blank" href="https://aceh.tribunnews.com/redaksi/">Redaksi</a>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <h5 class="text-white mb-4">Latest News</h5>
                         <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="<?= base_url('assets/img/portofolio-1.jpg') ?>" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="<?= base_url('assets/img/portofolio-2.jpg') ?>" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="<?= base_url('assets/img/portofolio-3.jpg') ?>" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="<?= base_url('assets/img/portofolio-4.jpg') ?>" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="<?= base_url('assets/img/portofolio-5.jpg') ?>" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="<?= base_url('assets/img/portofolio-6.jpg') ?>" alt="Image">
-                            </div>
+                            <?php
+                            $counter = 0; // Inisialisasi variabel counter
+                            foreach (array_merge($news1, $news2) as $item):
+                                if ($counter < 9): // Batasi pengulangan hanya sampai 6 kali
+                                    ?>
+                                    <div class="col-4">
+                                        <a href="<?= $item['link'] ?>" target="_blank">
+                                            <img class="img-fluid" src="<?= $item['image'] ?>" alt="<?= $item['title'] ?>">
+                                        </a>
+                                    </div>
+                                    <?php
+                                    $counter++; // Tambahkan nilai counter setiap kali melakukan iterasi
+                                endif;
+                            endforeach;
+                            ?>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <h5 class="text-white mb-4">Info Iklan</h5>
+                        <p><strong>PT Aceh Media Grafika</strong> Jalan Raya Lambaro, Km 4,5 Desa Meunasah Manyang,
+                            Kecamatan Ingin Jaya
+                            Kabupaten Aceh Besar, Aceh 23371</p>
+
                         <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
                         </div>
                     </div>
                 </div>
@@ -385,10 +438,10 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            &copy; <a class="border-bottom" href="#">2024 TRIBUNnews.com</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            A subsidiary of <a class="border-bottom" href="https://www.kgmedia.id">KG Media</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
@@ -421,7 +474,7 @@
 
     <!-- Template Javascript -->
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
-    
+
 
 </body>
 
